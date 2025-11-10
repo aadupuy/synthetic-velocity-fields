@@ -44,6 +44,14 @@ customizable 3D test cases for:
 
 ---
 
+## 📦 Installation (editable mode)
+
+```bash
+pip install -e .
+```
+
+---
+
 ## ✅ Generate one synthetic sample (HDF5 output)
 
 ```bash
