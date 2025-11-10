@@ -3,6 +3,8 @@
 Generate synthetic 3D **density** and **velocity** fields with attractors and repellers,  
 and export them **directly to HDF5** for use in the C++ segmentation pipeline.
 
+![Mock visualization](images/screenshot_attractors.png)
+
 ---
 
 ## 🧬 Scientific Context
