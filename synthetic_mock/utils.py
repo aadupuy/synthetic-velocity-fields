@@ -2,9 +2,10 @@ import numpy as np
 
 def make_grid(N: int, L: float):
     """Return 3D grid coordinates in box [0, L) with N^3 points."""
-    x = np.linspace(0, L, N, endpoint=False, dtype=np.float32)
-    y = np.linspace(0, L, N, endpoint=False, dtype=np.float32)
-    z = np.linspace(0, L, N, endpoint=False, dtype=np.float32)
+    half = L / 2
+    x = np.linspace(-half, half, N, endpoint=False, dtype=np.float32)
+    y = np.linspace(-half, half, N, endpoint=False, dtype=np.float32)
+    z = np.linspace(-half, half, N, endpoint=False, dtype=np.float32)
     return np.meshgrid(x, y, z, indexing="ij")
 
 def gaussian_3d(x, y, z, x0, y0, z0, sigma):

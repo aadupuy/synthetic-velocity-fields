@@ -36,14 +36,15 @@ def generate_sample(
 
     # ---- sample attractor/repeller specs ----
     specs = []
+    half = L / 2
     for _ in range(cfg.num_attractors):
-        x, y, z = rng.uniform(0, L, size=3)
+        x, y, z = rng.uniform(-half, half, size=3)
         sigma = rng.uniform(*cfg.sigma_range)
         strength = rng.uniform(*cfg.strength_range)
         specs.append(AttractorSpec(x, y, z, sigma, strength, "attractor"))
 
     for _ in range(cfg.num_repellers):
-        x, y, z = rng.uniform(0, L, size=3)
+        x, y, z = rng.uniform(-half, half, size=3)
         sigma = rng.uniform(*cfg.sigma_range)
         strength = rng.uniform(*cfg.strength_range)
         specs.append(AttractorSpec(x, y, z, sigma, strength, "repeller"))
